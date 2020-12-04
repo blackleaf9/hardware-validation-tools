@@ -23,7 +23,7 @@ if len(resources) == 0:
 
 if args.list:
     for i in resources:
-        print i
+        print (i)
     sys.exit(0)
 
 if args.filename == None:
@@ -34,13 +34,13 @@ if args.device == None:
     args.device = resources[0]
 
 if args.verbose:
-    print 'Using device %s.' % args.device
+    print ('Using device %s.' % args.device)
 
 
 scope = rm.open_resource(args.device, encoding = 'iso8859-1', query_delay=0.5)
 
 if args.verbose:
-    print 'Device IDN is %s.' % scope.query("*IDN?").strip()
+    print ('Device IDN is %s.' % scope.query("*IDN?").strip())
 
 # configure ink saver (black background as seen on screen)
 scope.write(':HARDcopy:INKSaver %u' % args.inksaver)
