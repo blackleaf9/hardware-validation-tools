@@ -1,6 +1,6 @@
 import pyvisa
 import time
-from src.equipments.bk8600 import Bk8600
+from src.equipments.lab_equipment import Bk8600
 
 
 

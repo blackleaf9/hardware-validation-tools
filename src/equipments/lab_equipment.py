@@ -48,6 +48,12 @@ class BK8600:
 	
 	def _set_input_off(self):
 		self.inst.write("INPut OFF")
+	
+	def toggle_eload(self, state):
+		if state:
+			self.inst.write("INPut ON")
+		else:
+			self.inst.write("INPut OFF")
 
 
 
