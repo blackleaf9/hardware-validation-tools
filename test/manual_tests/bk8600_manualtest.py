@@ -1,12 +1,11 @@
 import pyvisa
 import time
-from src.equipments.lab_equipment import Bk8600
-
-
+#from src.equipments.lab_equipment import BK8600
+from src.equipments.lab_equipment import BK8600 
 
 
 #initialize instrument
-inst = Bk8600()
+inst = BK8600()
 
 
 # To Set E-Load in Amps

@@ -3,7 +3,6 @@ import time
 from src.equipments.lab_equipment import E3631A
 
 TEST_OUTPUT = "P25V"
-TIME = 2
 
 
 
@@ -15,7 +14,7 @@ print("set output")
 voltage = input("Set Voltage")
 inst.set_voltage(voltage)
 print("Output set at " + TEST_OUTPUT)
-time.sleep(5)
+time.sleep(0.002)
 Operation = "OFF"
 
 while(Operation == "OFF"):
@@ -23,7 +22,7 @@ while(Operation == "OFF"):
     if Operation == "ON":
         inst.output_on()
         print("Output On")
-    time.sleep(0.2)
+    time.sleep(0.002)
 
 while Operation != "End":
     Operation = input("Enter:\n"+ "V to measure Voltage\n" + "C to measure Current\n" +"OFF to turn output off\n"+"End to close testing") 
